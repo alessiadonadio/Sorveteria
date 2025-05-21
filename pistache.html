@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Personalizar Pedido - Pistcahe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Raleway', sans-serif;
+      background-color: #fff8f2;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    header {
+      background-color: #ff9f9f;
+      padding: 20px 0;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+      color: white;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      font-weight: 700;
+      color: white;
+    }
+
+    .nav-links a:hover {
+      color: #ffe2e2;
+    }
+
+    .pedido-section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .pedido-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+    }
+
+    .pedido-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 600px;
+      margin: auto;
+      text-align: left;
+    }
+
+    .pedido-form label {
+      font-size: 1rem;
+      margin-bottom: 5px;
+      color: #555;
+    }
+
+    .pedido-form select,
+    .pedido-form input[type="email"],
+    .pedido-form input[type="text"],
+    .pedido-form input[type="number"] {
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+    }
+
+    .pedido-form input[type="submit"] {
+      background-color: #ff6b6b;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .pedido-form input[type="submit"]:hover {
+      background-color: #e25c5c;
+    }
+
+    .resumo-pedido {
+      background: #fff0f0;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 30px;
+      font-size: 1rem;
+      line-height: 1.5;
+      display: none;
+    }
+
+    .confirmar-btn {
+      margin-top: 15px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #4BB543;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: center;
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    footer {
+  background-color: #ff9f9f;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+     .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+  font-family: 'Raleway', sans-serif;
+  font-size: 2rem;
+}
+
+.logo-img {
+  height: 50px;      
+  width: 50px;       
+  border-radius: 50%;
+  object-fit: cover; 
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container header-content">
+         <h1 class="logo">
+  <img src="img/logo.png" alt="Logo Delícia Gelada" class="logo-img">
+  Delícia Gelada
+</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="sabores.html">Sabores</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="pedido-section">
+    <div class="container">
+      <h2>Personalize seu Pedido de Sorvete - Pistache</h2>
+      
+      <form class="pedido-form" onsubmit="return mostrarResumo(event)">
+        <label for="tamanho">Escolha o Tamanho</label>
+        <select id="tamanho" name="tamanho">
+          <option value="pequeno">Pequeno - R$ 10,00</option>
+          <option value="medio">Médio - R$ 14,00</option>
+          <option value="grande">Grande - R$ 18,00</option>
+        </select>
+
+        <label for="cobertura">Cobertura</label>
+        <select id="cobertura" name="cobertura">
+          <option value="chocolate">Chocolate</option>
+          <option value="caramelo">Caramelo</option>
+          <option value="morango">Morango</option>
+          <option value="nenhuma">Nenhuma</option>
+        </select>
+
+        <label>Complementos (R$ 2,00 cada):</label>
+        <label><input type="checkbox" name="complementos" value="granulado"> Granulado</label>
+        <label><input type="checkbox" name="complementos" value="nozes"> Nozes</label>
+        <label><input type="checkbox" name="complementos" value="pedacinhos de chocolate"> Pedacinhos de Chocolate</label>
+
+        <label for="email">Seu E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="exemplo@dominio.com" required>
+
+        <label for="pagamento">Forma de Pagamento:</label>
+        <select id="pagamento" name="pagamento">
+          <option value="Cartão de Crédito">Cartão de Crédito</option>
+          <option value="Pix">Pix</option>
+          <option value="Dinheiro">Dinheiro</option>
+        </select>
+
+        <input type="submit" value="Finalizar Pedido">
+      </form>
+
+      <div class="resumo-pedido" id="resumo"></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Delícia Gelada — Todos os direitos reservados.</p>
+      <p>Desenvolvido por Alessia Donadio</p>
+    </div>
+  </footer>
+
+  <script>
+    function mostrarResumo(event) {
+      event.preventDefault();
+
+      const tamanho = document.getElementById('tamanho').value;
+      const cobertura = document.getElementById('cobertura').value;
+      const email = document.getElementById('email').value;
+      const pagamento = document.getElementById('pagamento').value;
+      const complementos = Array.from(document.querySelectorAll('input[name="complementos"]:checked')).map(c => c.value);
+
+      let preco = 0;
+      if (tamanho === 'pequeno') preco = 10;
+      else if (tamanho === 'medio') preco = 14;
+      else if (tamanho === 'grande') preco = 18;
+
+      preco += complementos.length * 2;
+
+      const resumoDiv = document.getElementById('resumo');
+      resumoDiv.innerHTML = `
+        <h3>Resumo do Pedido:</h3>
+        <p><strong>Tamanho:</strong> ${tamanho}</p>
+        <p><strong>Cobertura:</strong> ${cobertura}</p>
+        <p><strong>Complementos:</strong> ${complementos.join(', ') || 'Nenhum'}</p>
+        <p><strong>E-mail:</strong> ${email}</p>
+        <p><strong>Pagamento:</strong> ${pagamento}</p>
+        <p><strong>Total:</strong> R$ ${preco.toFixed(2)}</p>
+        <a href="pedidoconfirmado.html" class="confirmar-btn">Confirmar Pedido</a>
+      `;
+      resumoDiv.style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>

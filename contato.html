@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contato - Delícia Gelada</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Raleway', sans-serif;
+      background-color: #fff8f2;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    
+    header {
+      background-color: #ff9f9f;
+      padding: 20px 0;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 2rem;
+      font-weight: bold;
+      color: white;
+    }
+
+    .logo-img {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      font-weight: 700;
+      color: white;
+    }
+
+    .nav-links a:hover {
+      color: #ffe2e2;
+    }
+
+   
+    .contato-section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .contato-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .contato-section p {
+      font-size: 1.1rem;
+      margin-bottom: 40px;
+      color: #555;
+    }
+
+    .form-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: space-between;
+    }
+
+    form {
+      flex: 1;
+      min-width: 300px;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      font-family: 'Raleway', sans-serif;
+    }
+
+    form textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #ff6b6b;
+      color: white;
+      text-align: center;
+      border-radius: 5px;
+      font-weight: 700;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #e25c5c;
+    }
+
+    .info-contato {
+      flex: 1;
+      min-width: 260px;
+      padding: 30px;
+      background-color: #fff0ec;
+      border-radius: 10px;
+    }
+
+    .info-contato h3 {
+      color: #ff6b6b;
+      margin-bottom: 20px;
+    }
+
+    .info-contato p {
+      margin-bottom: 10px;
+      color: #444;
+    }
+
+    
+    footer {
+      background-color: #ff9f9f;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+      }
+
+      .form-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container header-content">
+      <h1 class="logo">
+        <img src="img/logo.png" class="logo-img">
+        Delícia Gelada
+      </h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="sabores.html">Sabores</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="contato-section">
+    <div class="container">
+      <h2>Fale com a gente</h2>
+      <p>Envie uma mensagem ou venha nos visitar. Estamos prontos para adoçar seu dia!</p>
+
+      <div class="form-container">
+
+        
+        <form action="#" method="post">
+          <input type="text" name="nome" placeholder="Seu nome" required />
+          <input type="email" name="email" placeholder="Seu e-mail" required />
+          <input type="tel" name="telefone" placeholder="Seu telefone" />
+          <textarea name="mensagem" placeholder="Digite sua mensagem..." required></textarea>
+          <button type="submit" class="btn">Enviar Mensagem</button>
+        </form>
+
+       
+        <div class="info-contato">
+          <h3>Informações de Contato</h3>
+          <p><strong>Endereço:</strong> Rua das Delícias, 123 - Centro</p>
+          <p><strong>Telefone:</strong> (32) 99999-0000</p>
+          <p><strong>Email:</strong> contato@deliciagelada.com.br</p>
+          <p><strong>Horário:</strong> Seg a Dom - 12h às 22h</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Delícia Gelada — Todos os direitos reservados.</p>
+      <p>Desenvolvido por Alessia Donadio</p>
+    </div>
+  </footer>
+
+</body>
+</html>

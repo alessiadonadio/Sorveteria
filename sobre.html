@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sobre Nós - Delícia Gelada</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Raleway', sans-serif;
+      background-color: #fff8f2;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    /* Cabeçalho */
+    header {
+      background-color: #ff9f9f;
+      padding: 20px 0;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+      color: white;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      font-weight: 700;
+      color: white;
+    }
+
+    .nav-links a:hover {
+      color: #ffe2e2;
+    }
+
+    /* Conteúdo principal */
+    .sobre-section {
+      padding: 60px 20px;
+    }
+
+    .sobre-section h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+    }
+
+    .sobre-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .sobre-texto {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .sobre-texto h3 {
+      color: #ff6b6b;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .sobre-texto ul {
+      padding-left: 20px;
+      list-style: disc;
+    }
+
+    .sobre-img {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .sobre-img img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+   footer {
+  background-color: #ff9f9f;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+      }
+
+      .sobre-content {
+        flex-direction: column;
+      }
+    }
+
+    .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+  font-family: 'Raleway', sans-serif;
+  font-size: 2rem;
+}
+
+.logo-img {
+  height: 50px;      
+  width: 50px;       
+  border-radius: 50%;
+  object-fit: cover; 
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container header-content">
+         <h1 class="logo">
+  <img src="img/logo.png" alt="Logo Delícia Gelada" class="logo-img">
+  Delícia Gelada
+</h1>
+            <nav>
+  <ul class="nav-links">
+    <li><a href="index.html">Início</a></li>
+    <li><a href="sobre.html">Sobre</a></li>
+    <li><a href="sabores.html">Sabores</a></li>
+    <li><a href="contato.html">Contato</a></li>
+  </ul>
+</nav>
+    </div>
+  </header>
+
+  <section class="sobre-section">
+    <div class="container">
+      <h2>Sobre Nós</h2>
+      <div class="sobre-content">
+        <div class="sobre-texto">
+          <p>
+            Fundada em 2010, a <strong>Delícia Gelada</strong> nasceu com a missão de transformar o simples ato de tomar um sorvete em uma experiência inesquecível.
+            Com receitas exclusivas e ingredientes frescos, nossos sorvetes são produzidos artesanalmente com muito carinho.
+          </p>
+
+          <h3>Missão</h3>
+          <p>Oferecer sorvetes artesanais com qualidade, sabor e alegria, proporcionando momentos únicos para nossos clientes.</p>
+
+          <h3>Visão</h3>
+          <p>Ser a sorveteria mais amada da cidade, referência em sabor e atendimento.</p>
+
+          <h3>Valores</h3>
+          <ul>
+            <li>Qualidade em cada ingrediente</li>
+            <li>Respeito ao cliente e ao meio ambiente</li>
+            <li>Paixão pelo que fazemos</li>
+            <li>Atendimento com carinho e dedicação</li>
+          </ul>
+        </div>
+
+        <div class="sobre-img">
+          <img src="img/imagem.avif" alt="Sorvete artesanal" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Delícia Gelada — Todos os direitos reservados.</p>
+      <p>Desenvolvido por Alessia Donadio</p>
+    </div>
+  </footer>
+
+</body>
+</html>
